@@ -18,10 +18,12 @@
 	<script type="text/javascript">
 
 	var sFavColour = 'teal';
-	var aFavColors = ['teal', 'orange', 'blue'];
+	var aFavColors = ['teal', 'orange', 'blue', 'tomato', '#B0E0E6'];
 	var iColors = aFavColors.length;
+
 	function myFunction () {
-		document.body.style.backgroundColor = aFavColors[1];
+		document.body.style.backgroundColor = aFavColors[3];
+		document.getElementById('my-div').style.backgroundColor = aFavColors[4]
 	}
 
 	console.log('hello world. fave colour is ' + sFavColour + ' favColours = ' + iColors);
@@ -35,7 +37,7 @@
 	<h1>hello js rocket</h1>
 	<h2>does this work?</h2>
 	<h3>another test</h3>
-	<div>some text <b>that is bold</b></div>
+	<div id='my-div'>some text <b>that is bold</b></div>
 
 
 
