@@ -2,15 +2,41 @@
 
 <head>
 
-</head>s
+<title>rockets!!</title>
+
+<style>
+
+	button {
+		background-color:white;
+	}
+
+</style>
+
+	<script type="text/javascript">
+
+	var sFavColour = 'teal';
+	var aFavColors = ['teal', 'orange', 'blue'];
+	var iColors = aFavColors.length;
+	function myFunction () {
+		document.body.style.backgroundColor = sFavColour;
+	}
+
+	console.log('hello world. fave colour is ' + sFavColour + ' favColours = ' + iColors);
+
+	</script>
+
+</head>
 
 <body>
 
 	<h1>hello js rocket</h1>
 	<h2>does this work?</h2>
 	<h3>another test</h3>
+	<div>some text <b>the is bold</b></div>
 
-	<script type="text/javascript">console.log('hello world');</script>
+
+
+<button type="button" background-color='white' onclick="myFunction()">Set background color</button>
 
 </body>
 
