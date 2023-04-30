@@ -8,6 +8,7 @@
 
 	button {
 		background-color:green;
+		margin: 1em 0;
 	}
 	div {
 		background-color: ;
@@ -20,13 +21,17 @@
 	var sFavColour = 'teal';
 	var aFavColors = ['teal', 'orange', 'blue', 'tomato', '#B0E0E6'];
 	var iColors = aFavColors.length;
+	var iPointer = 0;
 
 	function myFunction () {
-		document.body.style.backgroundColor = aFavColors[3];
+		
+		document.body.style.backgroundColor = aFavColors[iPointer];
 		document.getElementById('my-div').style.backgroundColor = aFavColors[4]
+		if (iPointer == aFavColors.length - 1) {iPointer = 0;} else { iPointer ++}
+		console.log('hello world. fave colour is ' + sFavColour + ' iPointer = ' + iPointer);
 	}
 
-	console.log('hello world. fave colour is ' + sFavColour + ' favColours = ' + iColors);
+	
 
 	</script>
 
