@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -7,7 +8,76 @@
 
 <style>
 	table,th,td {border: 1px solid;}
+	h1, h2 {color: rgb(0,0,255);}
+	h2 {color:rgb(255,0,0);}
+
+	.main{font-family: helvetica, arial, sanserif}
+
+	.funky-button {padding: 2em 0;}
+
+	#funky{
+	  appearance: none;
+	  background-color: #2ea44f;
+	  border: 1px solid rgba(27, 31, 35, .15);
+	  border-radius: 6px;
+	  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+	  box-sizing: border-box;
+	  color: #fff;
+	  cursor: pointer;
+	  display: inline-block;
+	  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+	  font-size: 14px;
+	  font-weight: 600;
+	  line-height: 20px;
+	  padding: 6px 16px;
+	  position: relative;
+	  text-align: center;
+	  text-decoration: none;
+	  user-select: none;
+	  -webkit-user-select: none;
+	  touch-action: manipulation;
+	  vertical-align: middle;
+	  white-space: nowrap;
+	}
+
+	#funky:focus:not(:focus-visible):not(.focus-visible) {
+	  box-shadow: none;
+	  outline: none;
+	}
+
+	#funky:hover {
+	  background-color: #2c974b;
+	}
+
+	#funky:focus {
+	  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+	  outline: none;
+	}
+
+	#funky:disabled {
+	  background-color: #94d3a2;
+	  border-color: rgba(27, 31, 35, .1);
+	  color: rgba(255, 255, 255, .8);
+	  cursor: default;
+	}
+
+	#funky:active {
+	  background-color: #298e46;
+	  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+	}
 </style>
+
+<script type="text/javascript">
+
+	var favColour = 'teal';
+
+
+	function changeStyles () {
+		
+		document..getElementsByClassName('main').style.backgroundColor = favColour;
+	}
+
+</script>
 
 </head>
 
@@ -15,9 +85,9 @@
 
 <h1>Lorem ipsum dolor</h1>
 
-<p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+<p class="main">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p class="main">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p class="main">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
 
 <h2>Dolore eu fugiat nulla pariatur.</h2>
 
@@ -35,7 +105,7 @@
 			<th>Sed ut perspiciatis</th><th>Unde omnis iste natus error</th><th>Sit voluptatem accusantium doloremque</th>
 		</tr>
 	</thead>
-	<tbody>
+	<tbody  class="main">
 		<tr>
 			<td>laudantium, totam rem aperiam</td><td>eaque ipsa quae ab illo inventore veritatis</td><td>et quasi architecto beatae vitae dicta sunt explicabo.</td>
 		</tr>
@@ -45,7 +115,10 @@
 	</tbody>
 </table>
 
-</body>
+<div class="funky-button">
+	<button id="funky" type="button" onclick="changeStyles()">Do funky stuff</button>
+</div>
 
+</body>
 
 </html>
