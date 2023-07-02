@@ -7,6 +7,7 @@
 <title>rockets!!</title>
 
 <style>
+
 	table,th,td {border: 1px solid;}
 	h1, h2 {color: rgb(0,0,255);}
 	h2 {color:rgb(255,0,0);}
@@ -69,14 +70,26 @@
 
 <script type="text/javascript">
 
-	var favColour = 'teal';
-
+	var favColours = ['teal', 'pink', 'green', 'purple'];
+	var array_index = 0;
 
 	function changeStyles  () {
+	//increment thru the array and reset the array index if we reah the end of the array
+
+
+		if (array_index == favColours.length) {
+			console.log("reset the array_index")
+			array_index = 0;
+		} else {
+			array_index ++;
+			console.log("increment the array_index")
+		}
 		
-		const collection = document.getElementsByClassName("main");
+		var collection = document.getElementsByClassName("main");
 			for (let i = 0; i < collection.length; i++) {
-  			collection[i].style.backgroundColor = favColour;
+
+  			collection[i].style.backgroundColor = favColours[array_index];
+
 		}
 	}
 
