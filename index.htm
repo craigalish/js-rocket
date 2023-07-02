@@ -72,9 +72,12 @@
 	var favColour = 'teal';
 
 
-	function changeStyles () {
+	function changeStyles  () {
 		
-		document..getElementsByClassName('main').style.backgroundColor = favColour;
+		const collection = document.getElementsByClassName("main");
+			for (let i = 0; i < collection.length; i++) {
+  			collection[i].style.backgroundColor = favColour;
+		}
 	}
 
 </script>
