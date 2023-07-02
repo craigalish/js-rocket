@@ -74,10 +74,17 @@
 	var array_index = 0;
 
 	function changeStyles  () {
-	//increment thru the array and reset the array index if we reah the end of the array
 
+		//change the color of any element with the mian css class
+		var collection = document.getElementsByClassName("main");
+			for (let i = 0; i < collection.length; i++) {
 
-		if (array_index == favColours.length) {
+  			collection[i].style.backgroundColor = favColours[array_index];
+
+		}
+
+		//increment thru the array and reset the array index if we reah the end of the array
+		if (array_index == favColours.length - 1) {
 			console.log("reset the array_index")
 			array_index = 0;
 		} else {
@@ -85,12 +92,7 @@
 			console.log("increment the array_index")
 		}
 		
-		var collection = document.getElementsByClassName("main");
-			for (let i = 0; i < collection.length; i++) {
 
-  			collection[i].style.backgroundColor = favColours[array_index];
-
-		}
 	}
 
 </script>
